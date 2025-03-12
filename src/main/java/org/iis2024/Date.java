@@ -54,7 +54,6 @@ public class Date {
   /**
    * Constructs a Date object representing a specific day, month, and year.
    *
-<<<<<<< HEAD
    * @param day The day of the month (1-31).
    * @param month The month of the year (1-12).
    * @param year The year (should ideally be within the valid range of 1900 to 2050 for validation
@@ -64,17 +63,6 @@ public class Date {
     this.day = day;
     this.month = month;
     this.year = year;
-=======
-   * @param dia The day of the month (1-31).
-   * @param mes The month of the year (1-12).
-   * @param año The year (should ideally be within the valid range of 1900 to 2050 for validation
-   *     to pass).
-   */
-  public Date(int dia, int mes, int año) {
-    this.day = dia;
-    this.month = mes;
-    this.year = año;
->>>>>>> ef98d53fcd37b44595a52469989c1129a310fc8c
   }
 
   /**
@@ -91,7 +79,7 @@ public class Date {
     SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
     dateFormat.setLenient(false);
 
-    String dateString = String.format("%d/%d/%d", this.day, month, year);
+    String dateString = String.format("%d/%d/%d", day, month, year);
 
     try {
       dateFormat.parse(dateString);
